@@ -1,0 +1,125 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cirhosis</title>
+	<style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      form {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: inline-block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      input[type="text"],
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 15px;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+	<!-- <link rel="stylesheet" href="index.css"> -->
+</head>
+<body>
+    <h1>Cirrhosis Prediction</h1>
+    <form action="/predict" method="post">
+      <label for="ndays">N_Days:</label>
+      <input type="text" id="ndays" name="ndays"><br>
+
+      <label for="drug">Drug:</label>
+      <input type="text" id="drug" name="drug"><br>
+
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age"><br>
+
+      <label for="sex">Sex:</label>
+      <input type="text" id="sex" name="sex"><br>
+
+      <label for="ascites">Ascites:</label>
+      <input type="text" id="ascites" name="ascites"><br>
+
+      <label for="hepatomegaly">Hepatomegaly:</label>
+      <input type="text" id="hepatomegaly" name="hepatomegaly"><br>
+
+      <label for="spiders">Spiders:</label>
+      <input type="text" id="spiders" name="spiders"><br>
+
+      <label for="bilirubin">Bilirubin:</label>
+      <input type="text" id="bilirubin" name="bilirubin"><br>
+
+      <label for="cholesterol">Cholesterol:</label>
+      <input type="text" id="cholesterol" name="cholesterol"><br>
+
+      <label for="albumin">Albumin:</label>
+      <input type="text" id="albumin" name="albumin"><br>
+
+      <label for="copper">Copper:</label>
+      <input type="text" id="copper" name="copper"><br>
+
+      <label for="alkphos">Alk_Phos:</label>
+      <input type="text" id="alkphos" name="alkphos"><br>
+
+      <label for="sgot">SGOT:</label>
+      <input type="text" id="sgot" name="sgot"><br>
+
+      <label for="triglycerides">Triglycerides:</label>
+      <input type="text" id="triglycerides" name="triglycerides"><br>
+
+      <label for="platelets">Platelets:</label>
+      <input type="text" id="platelets" name="platelets"><br>
+
+      <label for="prothrombin">Prothrombin:</label>
+      <input type="number" id="prothrombin" name="prothrombin"><br>
+
+      <label for="edema">Edema:</label>
+      <select id="edema" name="edema">
+        <option value="Y">Y</option>
+        <option value="N">N</option>
+        <option value="S">S</option>
+      </select><br>
+
+      <label for="status">Status:</label>
+      <select id="status" name="status">
+        <option value="C">C</option>
+        <option value="D">d</option>
+        <option value="CL">CL</option>
+      </select><br>
+
+      <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
