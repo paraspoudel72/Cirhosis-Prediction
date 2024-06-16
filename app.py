@@ -52,10 +52,16 @@ def predict():
 
 	prediction = my_model.predict([[N_Days, Drug, Age, Sex, Ascites, Hepatomegaly, Spiders, Bilirubin, Cholesterol, Albumin, Copper, Alk_Phos, SGOT, Tryglicerides, Platelets, Prothrombin, EdemaY, EdemaN, EdemaS, StatusC, StatusD, StatusCL]])
 
-	return render_template('result.html', prediction = prediction)
+	prediction = int(prediction)
+
+	dic = {1: "Stage 1", 2: "Stage 2", 3: "Stage 3", 4: "Stage 4"}
+
+	return render_template('result.html', prediction = dic[prediction])
 
 
 
 
 if __name__  == '__main__':
 	app.run(debug = True)
+
+
